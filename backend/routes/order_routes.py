@@ -1,4 +1,4 @@
-from fastapi import APIRouter;
+from fastapi import APIRouter; # type: ignore
 
 order_router = APIRouter(prefix="/orders", tags=["orders"]);
 

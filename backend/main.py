@@ -1,7 +1,10 @@
-from fastapi import APIRouter, FastAPI
+import os
+from pathlib import Path
+from fastapi import APIRouter, FastAPI # type: ignore
 # uvicorn main:app --reload
 app = FastAPI(title="Curso de FastAPI", version="1.0.0", description="API de exemplo para curso de FastAPI");
 
+from models import Base, db # type: ignore
 from routes.auth_routes import auth_router
 from routes.order_routes import order_router
 
